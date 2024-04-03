@@ -4,12 +4,14 @@ export default function App() {
 
 const [lat, setLat] = useState([]);
 const [long, setLong] = useState([]);
+const [data, setData] = useState([]);
 
 useEffect(() => {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    setLat(position.coords.latitude);
-    setLong(position.coords.longitude);
-  });
+  const fetchData = async () => {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      setLat(position.coords.latitude);
+      setLong(position.coords.longitude);
+    });
 
   console.log("Latitude is:", lat)
   console.log("Longitude is:", long)
