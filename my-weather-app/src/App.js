@@ -23,9 +23,14 @@ useEffect(() => {
     fetchData();
   }, [lat, long])
 
-return (
-  <div className="App">
-
-  </div>
-);
+  return (
+    <div className="App">
+      {(typeof data.main != 'undefined') ? (
+        <Weather weatherData={data}/>
+      ): (
+        <div></div>
+      )}
+      
+    </div>
+  );
 }
