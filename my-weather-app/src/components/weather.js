@@ -11,4 +11,4 @@ const CardExampleCard = ({weatherData}) => (
 )
 
 export default CardExampleCard;
-"delete line after push"
+
